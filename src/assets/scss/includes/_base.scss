@@ -1,0 +1,73 @@
+@import "mixins";
+@import "fonts";
+@import "common/fonts";
+@import "common/colors";
+@import "common/one-classes";
+@import "common/selections";
+@import "common/states";
+@import "common/inputs";
+@import "common/section";
+@import "common/links";
+
+html, body {
+  position: relative;
+  font-family: $font-Regular, Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: $dark;
+  background-color: $gray;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+
+  //@include scroll;
+
+  @include r(1572) {
+    font-size: 15px;
+  }
+
+  @include r(1200) {
+    font-size: 14px;
+  }
+}
+
+.container {
+  @include rmin(1300) {
+    max-width: 1160px;
+  }
+}
+
+a {
+  color: $dark;
+
+  &:hover {
+    color: $orange;
+  }
+}
+
+.layout {
+  overflow: hidden;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.svg-sprite {
+  position: absolute;
+  bottom: 0;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+button {
+  box-shadow: none;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}

@@ -1,0 +1,55 @@
+.link {
+  position: relative;
+  font-size: 0.9rem;
+  display: inline-block;
+  color: $darkGray;
+
+  &:hover,
+  &:active {
+    color: $orange;
+  }
+
+  &-back,
+  &-forward {
+    svg {
+      stroke: $dark;
+      @include ease;
+      margin-bottom: 3px;
+    }
+    &:hover {
+      svg {
+        stroke: $orange;
+      }
+    }
+  }
+
+  &-back {
+    &:hover {
+      transform: translateX(-3px);
+    }
+  }
+  &-forward {
+    &:hover {
+      transform: translateX(3px);
+    }
+  }
+  
+  &--blue {
+    color: $orange;
+    &:hover {
+      color: $darkGray;
+    }
+  }
+}
+
+.stroke-none {
+  svg {
+    stroke: none !important;
+  }
+
+  &:hover {
+    svg {
+      //stroke: ;
+    }
+  }
+}
